@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap"
+      rel="stylesheet"
+    />
+    <title>Flexbox Photo Album</title>
+  </head>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Zen Kurenaido", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .page-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1em;
+      min-height: 100vh;
+      background-color: bisque;
+    }
+
+    .header-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 85px;
+      background-color: navy;
+      color: oldlace;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1em;
+      width: 100%;
+      border: 1px solid transparent;
+    }
+
+    .row {
+      display: flex;
+      gap: 1em;
+      width: 90%;
+    }
+
+    .photo-wrapper {
+      box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 25%;
+    }
+
+    .photo-wrapper:hover {
+      transform: scale(1.05);
+      transition: 0.5s ease-in-out;
+    }
+
+    .photo-wrapper img {
+      width: 80%;
+      height: 10rem;
+      padding-top: 1em;
+      object-fit: cover;
+    }
+
+    .photo-wrapper h3 {
+      text-align: center;
+    }
+
+    footer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-bottom: 2em;
+    }
+
+    button {
+      width: 8em;
+      height: 3em;
+      border-radius: 5px;
+      border: 1px solid transparent;
+      box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.5);
+      background-color: navy;
+      color: oldlace;
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: translate(2px, 4%);
+    }
+  </style>
+
+  <body>
+    <div class="page-wrapper">
+      <div class="header-wrapper">
+        <h1>My Photo Album</h1>
+      </div>
+
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="photo-wrapper">
+            <img src="./images/cat1.jpg" />
+            <h3>Cool Cat 1</h3>
+          </div>
+          <div class="photo-wrapper">
+            <img src="./images/cat2.jpg" />
+            <h3>Cool Cat 2</h3>
+          </div>
+          <div class="photo-wrapper">
+            <img src="./images/cat3.jpg" />
+            <h3>Cool Cat 3</h3>
+          </div>
+          <div class="photo-wrapper">
+            <img src="./images/cat4.jpg" />
+            <h3>Cool Cat 4</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="photo-wrapper">
+            <img src="./images/cat5.jpg" />
+            <h3>Cool Cat 5</h3>
+          </div>
+          <div class="photo-wrapper">
+            <img src="./images/cat6.jpg" />
+            <h3>Cool Cat 6</h3>
+          </div>
+          <div class="photo-wrapper">
+            <img src="./images/cat7.jpg" />
+            <h3>Cool Cat 7</h3>
+          </div>
+          <div class="photo-wrapper">
+            <img src="./images/cat8.jpg" />
+            <h3>Cool Cat 8</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="photo-wrapper">
+            <img src="./images/cat9.jpg" />
+            <h3>Cool Cat 9</h3>
+          </div>
+          <div class="photo-wrapper">
+            <img src="./images/cat10.jpg" />
+            <h3>Cool Cat 10</h3>
+          </div>
+          <div class="photo-wrapper">
+            <img src="./images/cat11.jpg" />
+            <h3>Cool Cat 11</h3>
+          </div>
+          <div class="photo-wrapper">
+            <img src="./images/cat12.jpg" />
+            <h3>Cool Cat 12</h3>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <button>Previous Page</button>
+        <button>Next Page</button>
+      </footer>
+    </div>
+  </body>
+</html>
